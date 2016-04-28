@@ -18,15 +18,25 @@ set backspace=indent,eol,start
 set mouse=a
 
 "--------------------- gui settings --------------
-set guifont=Roboto\ Mono\ Light\ for\ Powerline:h12
-set guioptions-=r
-set guioptions-=L
+" powerline font.
+""set guifont=Roboto\ Mono\ Light\ for\ Powerline:h12
+""set guifont=Roboto\ Mono\ Light\ for\ Powerline\ Light\ 10
+""set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Regular\ 11
+""set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 10
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
+"set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 10
+
+":set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right scroll bar
+set guioptions-=L  "remove left scroll bar
 
 "====================BASIC SETTINGS===========================
 "=============================================================
 set laststatus=2    "Always display the status line
 set number          "Show line number in left side
 set colorcolumn=81  "Vertical line
+highlight ColorColumn ctermbg=lightgrey guibg=black
 set ruler           "Show line and column numbers of cursor
 set showmode        "Show mode
 set showcmd         "Show partial command in status line
@@ -38,9 +48,11 @@ set hlsearch        "Highlight searches by default
 
 
 "--------- initial tab and indent settings ------------
+" due the vim-ruby plugin don't set to e spaces
+" see: https://github.com/vim-ruby/vim-ruby/issues/234
 set expandtab           " replaces tab with spaces
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2        " should be 4
+set softtabstop=2       " should be 4
 set autoindent
 
 syntax on             " Enable syntax highlighting
@@ -85,6 +97,8 @@ nnoremap <Leader>b :CtrlPBuffer<CR>
 nnoremap <Leader>f :CtrlPMRUFiles<CR>
 
 "------------- Save map --------------
+" in some terminals  <c-s> it is used to stop the srolling
+" and <c-q> to continue, so the key map below doesn't work in terminal
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 
@@ -98,9 +112,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 
 "--------------  vim-airline  --------------------------
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1  " populate powerline symbols
 let g:airline#extensions#tabline#enabled = 1
