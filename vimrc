@@ -75,12 +75,29 @@ match ErrorMsg '\s\+$'
 set noswapfile
 
 
-" plugin manager
-execute pathogen#infect()
+"----------- plugin manager (vim-plug) ---------------
+call plug#begin()
+Plug 'nanotech/jellybeans.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-airline/vim-airline'
+Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
+Plug 'benjifisher/matchit.zip'             "original author
+Plug 'tpope/vim-endwise'
+Plug 'mattn/emmet-vim'
+Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
+"Plug 'benekastah/neomake'
+Plug 'scrooloose/syntastic'                "supports rubocop
 
+"Add plugins to &runtimepath
+call plug#end()
+"----------------------------------------------------
 
 "Set color scheme
-colorscheme jellybeans
+silent! colorscheme jellybeans
 
 "-------- Map the leader key to SPACE ---------------------
 let mapleader="\<SPACE>"
