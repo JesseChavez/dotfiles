@@ -4,12 +4,6 @@ set nocompatible
 "set smartindent
 "set autoindent
 
-" disabling the arrows key
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
 "Allow backspacing (delete key) over everything in insert mode
 set backspace=indent,eol,start
 
@@ -17,19 +11,29 @@ set backspace=indent,eol,start
 "this stops scroll along all iterm history
 set mouse=a
 
-"--------------------- gui settings --------------
-" powerline font.
-""set guifont=Roboto\ Mono\ Light\ for\ Powerline:h12
-""set guifont=Roboto\ Mono\ Light\ for\ Powerline\ Light\ 10
-""set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Regular\ 11
-""set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Regular\ 10
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-"set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 10
+"--------------------- gui fonts -----------------
+" powerline fonts.
+"-------------------------------------------------
+" linux fonts
+"-------------------------------------------------
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
+" set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 10
+" set guifont=Roboto\ Mono\ Light\ for\ Powerline\ Light\ 13
+"-------------------------------------------------
+" mac fonts
+"-------------------------------------------------
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
+set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
+"set guifont=Roboto\ Mono\ Light\ for\ Powerline:h13
 
+
+"--------------- other gui settings --------------
 ":set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right scroll bar
 set guioptions-=L  "remove left scroll bar
+
+" Terminal options
 
 "====================BASIC SETTINGS===========================
 "=============================================================
@@ -116,6 +120,30 @@ let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_eruby_ruby_quiet_messages =
     \ {'regex': 'possibly useless use of a variable in void context'}
 
-"--------------  vim-airline  --------------------------
-let g:airline_powerline_fonts = 1  " populate powerline symbols
+"------------------------  vim-airline  --------------------------
+let g:airline_powerline_fonts = 1  "populate powerline symbols
 let g:airline#extensions#tabline#enabled = 1
+
+if !has('gui_running')
+  let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline#extensions#tabline#right_sep = ' '
+  let g:airline#extensions#tabline#right_alt_sep = '|'
+  let g:airline_left_sep = ' '
+  let g:airline_left_alt_sep = '|'
+  let g:airline_right_sep = ' '
+  let g:airline_right_alt_sep = '|'
+endif
+
+
+" ------ Disabling Arrow keys ------------
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+
+inoremap <left> <nop>
+inoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
