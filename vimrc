@@ -164,3 +164,9 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+"----------- spell checkiing --------------
+autocmd BufRead,BufNewFile *.md setlocal spell
+set complete+=kspell
+
+"------------------------ FIN ------------------
