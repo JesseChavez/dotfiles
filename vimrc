@@ -91,6 +91,7 @@ Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 "Plug 'benekastah/neomake'
 Plug 'scrooloose/syntastic'                "supports rubocop
+Plug 'cohama/lexima.vim'
 
 "Add plugins to &runtimepath
 call plug#end()
