@@ -58,8 +58,8 @@ Plug 'benjifisher/matchit.zip'             "original author
 Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
-"Plug 'benekastah/neomake'
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
+"Plug 'scrooloose/syntastic'
 Plug 'cohama/lexima.vim'
 
 "Add plugins to &runtimepath
@@ -94,20 +94,26 @@ nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
 
+"======================== Neomake settings ==========================
+" Auto runs Neomake
+" autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
+autocmd! BufWritePost * Neomake "on save and buffer activation
+"let g:neomake_open_list = 2     " open list or errors
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
 "======================== Syntastic settings =========================
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-let g:syntastic_eruby_ruby_quiet_messages =
-     \ {'regex': 'possibly useless use of a variable in void context'}
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+"
+" let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+" let g:syntastic_eruby_ruby_quiet_messages =
+"      \ {'regex': 'possibly useless use of a variable in void context'}
 
 
 
