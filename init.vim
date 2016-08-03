@@ -52,6 +52,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'benjifisher/matchit.zip'             "original author
 "Plug 'tpope/vim-endwise'
@@ -61,6 +62,12 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'benekastah/neomake'
 "Plug 'scrooloose/syntastic'
 Plug 'cohama/lexima.vim'
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" function! DoRemote(arg)
+"   UpdateRemotePlugins
+" endfunction
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'equalsraf/neovim-gui-shim'
 
 "Add plugins to &runtimepath
 call plug#end()
@@ -96,10 +103,15 @@ imap <c-s> <esc>:w<cr>a
 
 "======================== Neomake settings ==========================
 " Auto runs Neomake
+"let g:neomake_open_list = 2     " open list or errors
+"let g:neomage_ruby_mri_exe = '~/.rvm/rubies/ruby-2.2.4/bin/ruby'
+"let g:neomage_ruby_rubocop_exe = '~/.rvm/gems/ruby-2.2.2/bin/rubocop'
+" let g:neomake_c_lint_maker = {
+"   \ 'exe': 'lint',
+" }
+let g:neomake_ruby_enabled_makers = ['rubocop', 'mri']
 " autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
 autocmd! BufWritePost * Neomake "on save and buffer activation
-"let g:neomake_open_list = 2     " open list or errors
-let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
 "======================== Syntastic settings =========================
 " set statusline+=%#warningmsg#
@@ -149,7 +161,6 @@ inoremap <down> <nop>
 "============================== spell checkiing =======================
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
-
 
 
 

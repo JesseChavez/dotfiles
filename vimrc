@@ -44,6 +44,8 @@ highlight ColorColumn ctermbg=lightgrey guibg=black
 set ruler           "Show line and column numbers of cursor
 set showmode        "Show mode
 set showcmd         "Show partial command in status line
+set nosb            " new split above current split
+set nospr           " new split right of current
 
 "--------- search and copy/cut settings ------------
 set incsearch       "Find the next match as we type the search
@@ -92,6 +94,7 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 "Plug 'benekastah/neomake'
 Plug 'scrooloose/syntastic'                "supports rubocop
 Plug 'cohama/lexima.vim'
+Plug 'tpope/vim-surround'
 
 "Add plugins to &runtimepath
 call plug#end()
