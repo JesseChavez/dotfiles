@@ -67,6 +67,7 @@ Plug 'cohama/lexima.vim'
 "   UpdateRemotePlugins
 " endfunction
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'equalsraf/neovim-gui-shim'
 
 "Add plugins to &runtimepath
