@@ -59,6 +59,7 @@ Plug 'benjifisher/matchit.zip'             "original author
 Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
 "Plug 'scrooloose/syntastic'
 Plug 'cohama/lexima.vim'
