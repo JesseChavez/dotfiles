@@ -17,15 +17,18 @@ set mouse=a
 " linux fonts
 "-------------------------------------------------
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 10
-" set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 10
 " set guifont=Roboto\ Mono\ Light\ for\ Powerline\ Light\ 13
 "-------------------------------------------------
 " mac fonts
 "-------------------------------------------------
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h13
-set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
 "set guifont=Roboto\ Mono\ Light\ for\ Powerline:h13
 
+if has("macunix")
+  set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
+else
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 11
+endif
 
 "--------------- other gui settings --------------
 ":set guioptions-=m  "remove menu bar
@@ -91,10 +94,11 @@ Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
-"Plug 'benekastah/neomake'
+" Plug 'benekastah/neomake'
 Plug 'scrooloose/syntastic'                "supports rubocop
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
+Plug 'quanganhdo/grb256'
 
 "Add plugins to &runtimepath
 call plug#end()
@@ -136,6 +140,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_eruby_ruby_quiet_messages =
