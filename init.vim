@@ -70,6 +70,8 @@ Plug 'cohama/lexima.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'pangloss/vim-javascript'
+" Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
+Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'equalsraf/neovim-gui-shim'
 
 "Add plugins to &runtimepath
