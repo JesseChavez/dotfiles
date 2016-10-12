@@ -64,10 +64,7 @@ Plug 'benekastah/neomake'
 "Plug 'scrooloose/syntastic'
 Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" function! DoRemote(arg)
-"   UpdateRemotePlugins
-" endfunction
-" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'pangloss/vim-javascript'
@@ -115,7 +112,7 @@ imap <c-s> <esc>:w<cr>a
 " let g:neomake_c_lint_maker = {
 "   \ 'exe': 'lint',
 " }
-let g:neomake_ruby_enabled_makers = ['rubocop', 'mri']
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 
@@ -171,7 +168,8 @@ inoremap <down> <nop>
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
-
+"=============== deoplete =========
+let g:deoplete#enable_at_startup = 1
 
 "Neomake on save
 "autocmd! BufWritePost * Neomake
