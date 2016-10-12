@@ -68,6 +68,8 @@ Plug 'cohama/lexima.vim'
 " endfunction
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'pangloss/vim-javascript'
 Plug 'equalsraf/neovim-gui-shim'
 
 "Add plugins to &runtimepath
@@ -111,6 +113,9 @@ imap <c-s> <esc>:w<cr>a
 "   \ 'exe': 'lint',
 " }
 let g:neomake_ruby_enabled_makers = ['rubocop', 'mri']
+
+let g:neomake_javascript_enabled_makers = ['eslint']
+
 " autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
 autocmd! BufWritePost * Neomake "on save and buffer activation
 
