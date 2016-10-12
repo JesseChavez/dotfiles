@@ -4,7 +4,7 @@
 
 
 "===================== Basic Settings ==========================
-set laststatus=1   "Always display the status line
+set laststatus=2   "Always display the status line
 set number         "show line number in left side
 set colorcolumn=81 "vertical line
 set ruler          "show line and column numbers of cursor
@@ -72,7 +72,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'equalsraf/neovim-gui-shim'
+Plug 'equalsraf/neovim-gui-shim' " related to ginit.vim
 
 "Add plugins to &runtimepath
 call plug#end()
@@ -149,7 +149,7 @@ if has('nvim')
   let g:airline#extensions#tabline#right_alt_sep = '|'
   let g:airline_left_sep = ''
   let g:airline_left_alt_sep = '|'
-  let g:airline_right_sep = ' '
+  let g:airline_right_sep = ''
   let g:airline_right_alt_sep = '|'
 "let g:airline_theme= 'serene'
 endif
