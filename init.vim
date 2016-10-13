@@ -70,6 +70,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 Plug 'othree/javascript-libraries-syntax.vim'
+Plug '1995eaton/vim-better-javascript-completion'
 Plug 'equalsraf/neovim-gui-shim' " related to ginit.vim
 
 "Add plugins to &runtimepath
