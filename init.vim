@@ -114,7 +114,7 @@ imap <c-s> <esc>:w<cr>a
 " }
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
 
-let g:neomake_javascript_enabled_makers = ['standard']
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 " autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
 autocmd! BufWritePost * Neomake "on save and buffer activation
