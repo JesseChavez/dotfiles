@@ -174,3 +174,8 @@ let g:deoplete#enable_at_startup = 1
 
 "Neomake on save
 "autocmd! BufWritePost * Neomake
+
+"=============== omni =============
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
