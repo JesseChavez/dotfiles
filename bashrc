@@ -123,3 +123,10 @@ HISTSIZE=500
 
 # command lines in history file ( .bash_history file )
 HISTFILESIZE=20000
+
+# git branch to the prompt
+export GIT_PS1_SHOWDIRTYSTATE=1
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(__git_ps1)\[\033[00m\]$ "
