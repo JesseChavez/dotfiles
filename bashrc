@@ -115,3 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# ------------------- custom settings -----------------
+
+# command lines in history list ( in memory for current session )
+HISTSIZE=500
+
+# command lines in history file ( .bash_history file )
+HISTFILESIZE=20000
