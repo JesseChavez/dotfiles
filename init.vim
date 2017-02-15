@@ -11,6 +11,7 @@ set ruler          "show line and column numbers of cursor
 set showcmd        "show partial command in status line
 set showmode       "show mode
 "set showmatch      "show matching brackets
+set termguicolors
 
 "----------- search and copy/cut settings -------------
 set incsearch   "find the next match as we type the search
