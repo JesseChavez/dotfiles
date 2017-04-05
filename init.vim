@@ -28,6 +28,9 @@ set shiftwidth=2    " Indentation amount for < and > commands.
 set softtabstop=2   " Render TABs using this many spaces.
 set autoindent      " initial sinple indent, just coppy the previous line indent
 
+" ------------- complete options -------------------
+set completeopt=longest,menuone,preview " show the matches even if one
+
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -41,6 +44,8 @@ match ErrorMsg '\s\+$'
 " no swap file
 set noswapfile
 
+"================ disable python 2 support ==================
+let g:loaded_python_provider = 1
 
 "===================== GUI settings =========================
 set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
@@ -65,7 +70,7 @@ Plug 'benekastah/neomake'
 "Plug 'scrooloose/syntastic'
 Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'mustache/vim-mustache-handlebars'
@@ -176,7 +181,7 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
 
 "=============== deoplete =========
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 "Neomake on save
 "autocmd! BufWritePost * Neomake
