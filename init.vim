@@ -69,6 +69,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'slim-template/vim-slim'
 Plug 'pangloss/vim-javascript'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -184,3 +185,8 @@ let g:deoplete#enable_at_startup = 1
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+
+"======== Enable slim syntax highlight ===========================
+" autocmd FileType slim setlocal foldmethod=indent
+" autocmd BufNewFile,BufRead *.slim set filetype=slim
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
