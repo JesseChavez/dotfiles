@@ -154,6 +154,9 @@ if has('nvim')
 "let g:airline_theme= 'serene'
 endif
 
+"========================== supertab settings =======================
+let g:SuperTabDefaultCompletionType = '<c-n>'
+"let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
 "=========================== Disabling Arrow keys ====================
 nnoremap <left> <nop>
