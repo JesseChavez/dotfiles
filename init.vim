@@ -68,6 +68,7 @@ Plug 'cohama/lexima.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
 
+Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 Plug 'othree/javascript-libraries-syntax.vim'
