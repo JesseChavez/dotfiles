@@ -131,6 +131,8 @@ parse_git_branch() {
 }
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(__git_ps1)\[\033[00m\]$ "
 
-# chruby settings
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+# MS SQL server tools
+export PATH="$PATH:/opt/mssql-tools/bin"
+
+ #Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
