@@ -67,7 +67,6 @@ Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'

@@ -27,7 +27,7 @@ set mouse=a
 if has("macunix")
   set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
 else
-  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 11
+  set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline\ Regular\ 10
 endif
 
 "--------------- other gui settings --------------
