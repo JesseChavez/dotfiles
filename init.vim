@@ -16,7 +16,7 @@ set termguicolors
 "----------- search and copy/cut settings -------------
 set incsearch   "find the next match as we type the search
 set hlsearch    "highlight searches by default
-"set clipboard+=unnamedplus "copy to system clipboard
+set clipboard+=unnamedplus "copy to system clipboard
 
 
 set formatoptions+=o    " Continue comment marker in new lines.
@@ -67,6 +67,7 @@ Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'mustache/vim-mustache-handlebars'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
