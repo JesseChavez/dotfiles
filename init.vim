@@ -61,14 +61,15 @@ Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'benjifisher/matchit.zip'             "original author
-"Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
+Plug 'Raimondi/delimitMate'
 Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
 "Plug 'scrooloose/syntastic'
-Plug 'cohama/lexima.vim'
+" Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides'
