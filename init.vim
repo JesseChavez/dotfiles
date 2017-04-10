@@ -72,7 +72,7 @@ Plug 'benekastah/neomake'
 " Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -88,6 +88,16 @@ call plug#end()
 
 "Set color scheme
 silent! colorscheme jellybeans
+
+"------------------ splits settings ---------------------------
+set splitbelow  " open new split below
+set splitright  " open vertical split on the right
+
+"------------ neovim terminal ----------------
+tnoremap <Esc> <C-\><C-n>
+"nnoremap <Leader>t :split | term
+command! -nargs=* T split | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
 
 "--------- Map the leader key to SPACE ------------------
 let mapleader="\<SPACE>"
