@@ -47,10 +47,6 @@ set noswapfile
 "================ disable python 2 support ==================
 let g:loaded_python_provider = 1
 
-"===================== GUI settings =========================
-set guifont=Droid\ Sans\ Mono\ Slashed\ for\ Powerline:h13
-
-
 "----------------- vim-plug ---------------
 call plug#begin()
 Plug 'nanotech/jellybeans.vim'
