@@ -118,6 +118,8 @@ fi
 
 # ------------------- custom settings -----------------
 
+alias treed='tree --dirsfirst -F'
+
 # command lines in history list ( in memory for current session )
 HISTSIZE=500
 
