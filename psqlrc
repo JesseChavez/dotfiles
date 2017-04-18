@@ -1,2 +1,9 @@
 \pset pager off
-\pset null ¤
+\pset null [NULL]
+\pset border 2
+\pset linestyle unicode
+\pset format wrapped
+\x auto
+\timing
+\set COMP_KEYWORD_CASE upper
+\set PROMPT1 '%[%033[33;1m%]%x%[%033[0m%]%[%033[1m%]%/%[%033[0m%]%R%# '
