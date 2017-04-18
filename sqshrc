@@ -1,1 +1,5 @@
 \set style=pretty
+\set colsep="|"
+\set semicolon_hack=1
+\set keyword_completion=3
+\set keyword_file=~/sqsh_keywords
