@@ -84,11 +84,11 @@ call plug#end()
 "Set color scheme
 silent! colorscheme jellybeans
 
-"------------------ splits settings ---------------------------
+"------------------ splits settings ---------------------------------
 set splitbelow  " open new split below
 set splitright  " open vertical split on the right
 
-"------------ neovim terminal ----------------
+"--------------------- neovim terminal ------------------------------
 tnoremap <Esc> <C-\><C-n>
 "nnoremap <Leader>t :split | term
 command! -nargs=* T split | terminal <args>
@@ -96,6 +96,10 @@ command! -nargs=* VT vsplit | terminal <args>
 
 "--------- Map the leader key to SPACE ------------------
 let mapleader="\<SPACE>"
+
+"--------------------- Buffer naviagation ---------------------------
+" Alternatively  it can be  ':b <space>
+nnoremap <Leader>b :buffer<space>
 
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
