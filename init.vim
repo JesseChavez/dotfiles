@@ -50,7 +50,6 @@ let g:loaded_python_provider = 1
 "----------------- vim-plug ---------------
 call plug#begin()
 Plug 'nanotech/jellybeans.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'jeetsukumaran/vim-filebeagle'
@@ -101,17 +100,6 @@ let mapleader="\<SPACE>"
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
 let g:gitgutter_max_signs = 500  " default value
-
-"-------------------------- CtrlP settings --------------------------
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:40'
-"Key mappings for CtrlP
-"Open file menu
-nnoremap <Leader>o :CtrlP<CR>
-"Open buffer menu
-nnoremap <Leader>b :CtrlPBuffer<CR>
-"Open most recently used files
-nnoremap <Leader>f :CtrlPMRUFiles<CR>
-
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
