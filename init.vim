@@ -98,8 +98,7 @@ command! -nargs=* VT vsplit | terminal <args>
 let mapleader="\<SPACE>"
 
 "--------------------- Buffer naviagation ---------------------------
-" Alternatively  it can be  ':b <space>
-nnoremap <Leader>b :buffer<space>
+nnoremap <Leader>b :ls<cr>:b
 
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
