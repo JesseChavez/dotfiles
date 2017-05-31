@@ -104,6 +104,7 @@ let mapleader="\<SPACE>"
 " nnoremap <Leader>b q:ib<space>
 let g:buffergator_viewport_split_policy='B'
 
+
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
 let g:gitgutter_max_signs = 500  " default value
