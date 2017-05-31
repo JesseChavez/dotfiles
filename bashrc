@@ -119,6 +119,8 @@ fi
 # ------------------- custom settings -----------------
 
 alias treed='tree --dirsfirst -F'
+alias ls1='tree --dirsfirst -F -L 1'
+alias ls2='tree --dirsfirst -F -L 2'
 
 # command lines in history list ( in memory for current session )
 HISTSIZE=500

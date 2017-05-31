@@ -68,6 +68,8 @@ Plug 'benekastah/neomake'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
+Plug 'brooth/far.vim'
+Plug 'jeetsukumaran/vim-buffergator'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -98,7 +100,9 @@ command! -nargs=* VT vsplit | terminal <args>
 let mapleader="\<SPACE>"
 
 "--------------------- Buffer naviagation ---------------------------
-nnoremap <Leader>b :ls<cr>:b
+" nnoremap <Leader>b :ls<cr>:b
+" nnoremap <Leader>b q:ib<space>
+let g:buffergator_viewport_split_policy='B'
 
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
