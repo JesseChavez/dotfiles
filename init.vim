@@ -70,6 +70,7 @@ Plug 'benekastah/neomake'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'posva/vim-vue'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
