@@ -70,14 +70,16 @@ Plug 'benekastah/neomake'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'posva/vim-vue'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'posva/vim-vue'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug '1995eaton/vim-better-javascript-completion'
+"Plug 'othree/javascript-libraries-syntax.vim'
+" Plug '1995eaton/vim-better-javascript-completion'
 Plug 'equalsraf/neovim-gui-shim' " related to ginit.vim
 
 "Add plugins to &runtimepath
@@ -199,3 +201,5 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " autocmd FileType slim setlocal foldmethod=indent
 " autocmd BufNewFile,BufRead *.slim set filetype=slim
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+
+autocmd FileType vue syntax sync fromstart
