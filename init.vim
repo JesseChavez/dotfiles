@@ -63,7 +63,6 @@ Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
-"Plug 'scrooloose/syntastic'
 " Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -135,22 +134,6 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 
 " autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
 autocmd! BufWritePost * Neomake "on save and buffer activation
-
-"======================== Syntastic settings =========================
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-"
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-"
-" let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-" let g:syntastic_eruby_ruby_quiet_messages =
-"      \ {'regex': 'possibly useless use of a variable in void context'}
-
-
 
 "======================= airline settings =============================
 let g:airline_powerline_fonts = 1
