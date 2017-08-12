@@ -62,6 +62,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -111,6 +112,14 @@ let g:buffergator_viewport_split_policy='B'
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
 let g:gitgutter_max_signs = 500  " default value
+
+"----------------------- Ale settings -------------------------------
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
