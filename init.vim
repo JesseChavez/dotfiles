@@ -70,6 +70,7 @@ Plug 'benekastah/neomake'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'kassio/neoterm'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -96,8 +97,9 @@ set splitright  " open vertical split on the right
 "--------------------- neovim terminal ------------------------------
 tnoremap <Esc> <C-\><C-n>
 "nnoremap <Leader>t :split | term
-command! -nargs=* T split | terminal <args>
-command! -nargs=* VT vsplit | terminal <args>
+let g:neoterm_repl_ruby = 'pry'
+" command! -nargs=* T split | terminal <args>
+" command! -nargs=* VT vsplit | terminal <args>
 
 "--------- Map the leader key to SPACE ------------------
 let mapleader="\<SPACE>"
