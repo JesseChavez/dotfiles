@@ -62,7 +62,6 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
-Plug 'benekastah/neomake'
 " Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -119,21 +118,6 @@ let g:gitgutter_max_signs = 500  " default value
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
-
-"======================== Neomake settings ==========================
-" Auto runs Neomake
-"let g:neomake_open_list = 2     " open list or errors
-"let g:neomage_ruby_mri_exe = '~/.rvm/rubies/ruby-2.2.4/bin/ruby'
-"let g:neomage_ruby_rubocop_exe = '~/.rvm/gems/ruby-2.2.2/bin/rubocop'
-" let g:neomake_c_lint_maker = {
-"   \ 'exe': 'lint',
-" }
-let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-
-let g:neomake_javascript_enabled_makers = ['eslint']
-
-" autocmd! BufWritePost,BufEnter * Neomake "on save and buffer activation
-autocmd! BufWritePost * Neomake "on save and buffer activation
 
 "======================= airline settings =============================
 let g:airline_powerline_fonts = 1
