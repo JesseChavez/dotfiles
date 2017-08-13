@@ -126,6 +126,12 @@ let g:ale_sign_warning = '⚠'
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
+" without this all linters are enabled, this list enable specific linters
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'ruby': ['rubocop', 'ruby'],
+\}
+
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
