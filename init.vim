@@ -116,10 +116,16 @@ let g:gitgutter_max_signs = 500  " default value
 "----------------------- Ale settings -------------------------------
 " let g:ale_sign_error = '>>'
 " let g:ale_sign_warning = '--'
+
+" highlight clear ALEErrorSign
+" highlight clear ALEStyleWarning
+let g:ale_set_highlights = 0
+
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
+
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
