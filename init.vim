@@ -69,6 +69,7 @@ Plug 'w0rp/ale'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -139,6 +140,10 @@ let g:ale_linters = {
 nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
+
+"=============================
+nnoremap <Leader>b :CtrlPBuffer<cr>
+nnoremap <Leader>e :Ex<cr>
 
 "======================= airline settings =============================
 let g:airline_powerline_fonts = 1
