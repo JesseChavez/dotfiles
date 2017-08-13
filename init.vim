@@ -54,7 +54,6 @@ call plug#begin()
 Plug 'nanotech/jellybeans.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
-Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'benjifisher/matchit.zip'             "original author
@@ -69,14 +68,7 @@ Plug 'w0rp/ale'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
-" Plug 'jeetsukumaran/vim-buffergator'
 Plug 'kassio/neoterm'
-" to build c extensions for command-t go to:
-" ~/.config/nvim/plugged/command-t/ruby/command-t/ext/command-t
-" then:
-" ruby extconf.rb
-" make
-Plug 'wincent/command-t'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
