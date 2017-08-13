@@ -12,6 +12,8 @@ set showcmd        "show partial command in status line
 set showmode       "show mode
 "set showmatch      "show matching brackets
 set termguicolors
+" ignoring some folders, command-t uses this to ignore files
+set wildignore+=node_modules,log,tmp
 
 "----------- search and copy/cut settings -------------
 set incsearch   "find the next match as we type the search
