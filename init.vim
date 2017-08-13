@@ -67,7 +67,6 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 " Plug 'jeetsukumaran/vim-buffergator'
@@ -184,12 +183,6 @@ inoremap <down> <nop>
 "============================== spell checkiing =======================
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
-
-"=============== deoplete =========
-"let g:deoplete#enable_at_startup = 1
-
-"Neomake on save
-"autocmd! BufWritePost * Neomake
 
 "=============== omni =============
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
