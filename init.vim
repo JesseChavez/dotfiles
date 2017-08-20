@@ -70,6 +70,7 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeetsukumaran/vim-filebeagle'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
