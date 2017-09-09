@@ -70,6 +70,7 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeetsukumaran/vim-filebeagle'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -142,6 +143,7 @@ imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
 
 "=============================
+" let g:ctrlp_map = '<Leader>p'
 nnoremap <Leader>b :CtrlPBuffer<cr>
 nnoremap <Leader>e :Ex<cr>
 
