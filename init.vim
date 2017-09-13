@@ -72,7 +72,7 @@ Plug 'jeetsukumaran/vim-filebeagle'
 if has('mac')
   Plug '/usr/local/opt/fzf'
 else
-  Plug '/home/jessec/.linuxbrew/opt/fzf'
+  Plug $HOME.'/.linuxbrew/opt/fzf'
 endif
 Plug 'junegunn/fzf.vim'
 
