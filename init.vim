@@ -69,7 +69,11 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug '/home/jessec/.linuxbrew/opt/fzf'
+if has('mac')
+  Plug '/usr/local/opt/fzf'
+else
+  Plug '/home/jessec/.linuxbrew/opt/fzf'
+endif
 Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
