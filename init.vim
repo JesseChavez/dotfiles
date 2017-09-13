@@ -65,12 +65,12 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug '/home/jessec/.linuxbrew/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -104,11 +104,15 @@ let g:neoterm_repl_ruby = 'pry'
 "--------- Map the leader key to SPACE ------------------
 let mapleader="\<SPACE>"
 
-"--------------------- Buffer naviagation ---------------------------
-" nnoremap <Leader>b :ls<cr>:b
-" nnoremap <Leader>b q:ib<space>
-" let g:buffergator_viewport_split_policy='B'
+"---------------------- Filebeagle ---------------------------
+let g:filebeagle_suppress_keymaps = 1
+" map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
+map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 
+"---------------------- FZF -----------------------------
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>g :GFiles<cr>
 
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
@@ -142,8 +146,7 @@ nmap <c-s> :w<cr>
 imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
 
-"=============================
-nnoremap <Leader>b :CtrlPBuffer<cr>
+"======================= Explore ==================
 nnoremap <Leader>e :Ex<cr>
 
 "======================= airline settings =============================
