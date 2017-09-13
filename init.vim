@@ -65,12 +65,12 @@ Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug '/home/jessec/.linuxbrew/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
