@@ -182,7 +182,7 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 
 "============================== spell checkiing =======================
-autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md,*.rb,*.yml,*.js,*.py,*.vim,*.vue setlocal spell
 set complete+=kspell
 
 "=============== omni =============
