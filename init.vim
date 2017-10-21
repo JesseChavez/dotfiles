@@ -154,7 +154,7 @@ imap <c-s> <esc>:w<cr>a
 nnoremap <Leader>e :Ex<cr>
 
 "======================= airline settings =============================
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 2
 
 " if !has('gui_running')
