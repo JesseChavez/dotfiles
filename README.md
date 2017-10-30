@@ -1,3 +1,5 @@
 # My dotfiles
+
 ## sample
-`ln -sv dotfiles/irbrc .irbrc`
+
+`ln -sv ~/dotfiles/irbrc .irbrc`

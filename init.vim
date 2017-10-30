@@ -69,7 +69,12 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug '/home/jessec/.linuxbrew/opt/fzf'
+if has('mac')
+  Plug '/usr/local/opt/fzf'
+else
+  " Plug $HOME.'/.linuxbrew/opt/fzf'
+  Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+endif
 Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
@@ -150,7 +155,7 @@ imap <c-s> <esc>:w<cr>a
 nnoremap <Leader>e :Ex<cr>
 
 "======================= airline settings =============================
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 2
 
 " if !has('gui_running')
