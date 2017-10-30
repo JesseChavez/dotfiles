@@ -1,7 +1,7 @@
 module.exports = {
-    "oni.useDefaultConfig": false,
-    "oni.loadInitVim": true,
-    "editor.fontSize": "14px",
+    "oni.loadInitVim": false,
+    "oni.useDefaultConfig": true,
+    "editor.fontSize": "15px",
     "editor.fontFamily": "Droid Sans Mono Dotted for Powerline",
     "editor.completions.enabled": true
 }
