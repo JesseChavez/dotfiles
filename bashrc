@@ -116,27 +116,29 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ------------------- custom settings -----------------
-
+#======================custom commences===========================
+# tree needs to be installed
 alias treed='tree --dirsfirst -F'
 alias ls1='tree --dirsfirst -F -L 1'
 alias ls2='tree --dirsfirst -F -L 2'
 
 # command lines in history list ( in memory for current session )
-HISTSIZE=500
+HISTSIZE=1000
 
 # command lines in history file ( .bash_history file )
-HISTFILESIZE=20000
+HISTFILESIZE=10000
+
+# parse_git_branch() {
+#      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+# }
 
 # git branch to the prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(__git_ps1)\[\033[00m\]$ "
 
 # MS SQL server tools
 export PATH="$PATH:/opt/mssql-tools/bin"
+#======================custom concludes===========================
 
  #Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
