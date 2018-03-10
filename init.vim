@@ -48,6 +48,7 @@ set noswapfile
 
 "================ disable python 2 support ==================
 let g:loaded_python_provider = 1
+let g:loaded_python3_provider = 1
 
 "----------------- vim-plug ---------------
 call plug#begin()
@@ -66,7 +67,7 @@ Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
 if has('mac')
