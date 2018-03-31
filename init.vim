@@ -69,14 +69,6 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 " Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
-if has('mac')
-  Plug '/usr/local/opt/fzf'
-else
-  " Plug $HOME.'/.linuxbrew/opt/fzf'
-  Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
-endif
-Plug 'junegunn/fzf.vim'
-
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
 Plug 'jelera/vim-javascript-syntax'
@@ -113,11 +105,6 @@ let mapleader="\<SPACE>"
 let g:filebeagle_suppress_keymaps = 1
 " map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
-
-"---------------------- FZF -----------------------------
-nnoremap <Leader>b :Buffers<cr>
-nnoremap <Leader>f :Files<cr>
-nnoremap <Leader>g :GFiles<cr>
 
 "---------------------- Gitgutter -------------------------
 set updatetime=1000              " 1 second
