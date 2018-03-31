@@ -43,8 +43,11 @@ set list listchars=tab:»‡,trail:‡,nbsp:‡
 " set list listchars=tab:»•,trail:•,nbsp:•
 match ErrorMsg '\s\+$'
 
-" no swap file
+" ------------- some file configuration -------------------
 set noswapfile
+" Important for webpack, parcel, or any other programs that are watching files.
+" It is strategy for saving files.
+set backupcopy=yes
 
 "================ disable python 2 support ==================
 let g:loaded_python_provider = 1
