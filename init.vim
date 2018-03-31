@@ -12,8 +12,6 @@ set showcmd        "show partial command in status line
 set showmode       "show mode
 "set showmatch      "show matching brackets
 set termguicolors
-" ignoring some folders, command-t uses this to ignore files
-set wildignore+=node_modules,log,tmp
 
 "----------- search and copy/cut settings -------------
 set incsearch   "find the next match as we type the search
@@ -30,9 +28,16 @@ set shiftwidth=2    " Indentation amount for < and > commands.
 set softtabstop=2   " Render TABs using this many spaces.
 set autoindent      " initial sinple indent, just coppy the previous line indent
 
-" ------------- complete options -------------------
+" ------------- complete options in insert mode-------------------
 set completeopt=longest,menuone,preview " show the matches even if one
 
+" ------------- other complete  options-------------------
+set wildmode=list:full
+" ignoring some folders, command-t uses this to ignore files
+set wildignore+=node_modules,log,tmp
+
+
+" ------------- syntax and editing file options -------------------
 syntax on             " Enable syntax highlighting
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -43,7 +48,7 @@ set list listchars=tab:»‡,trail:‡,nbsp:‡
 " set list listchars=tab:»•,trail:•,nbsp:•
 match ErrorMsg '\s\+$'
 
-" ------------- some file configuration -------------------
+" ------------- some file saving options -------------------
 set noswapfile
 " Important for webpack, parcel, or any other programs that are watching files.
 " It is strategy for saving files.
