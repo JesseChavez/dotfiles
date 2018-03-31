@@ -102,6 +102,7 @@ let g:neoterm_repl_ruby = 'pry'
 let mapleader="\<SPACE>"
 
 "---------------------- Filebeagle ---------------------------
+" disable the default mapping keys so I can map my own ones
 let g:filebeagle_suppress_keymaps = 1
 " map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
@@ -144,19 +145,6 @@ nnoremap <Leader>e :Ex<cr>
 "======================= airline settings =============================
 " let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 2
-
-" if !has('gui_running')
-"   let g:airline#extensions#tabline#fnamemod = ':t'
-"   let g:airline#extensions#tabline#left_sep = ''
-"   let g:airline#extensions#tabline#left_alt_sep = '|'
-"   let g:airline#extensions#tabline#right_sep = ''
-"   let g:airline#extensions#tabline#right_alt_sep = '|'
-"   let g:airline_left_sep = ''
-"   let g:airline_left_alt_sep = '|'
-"   let g:airline_right_sep = ''
-"   let g:airline_right_alt_sep = '|'
-" "let g:airline_theme= 'serene'
-" endif
 
 "========================== supertab settings =======================
 let g:SuperTabDefaultCompletionType = '<c-n>'
