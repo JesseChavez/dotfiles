@@ -134,8 +134,8 @@ let g:ale_linters = {
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
 " and <c-q> to continue, so the key map below doesn't work in terminal
-nmap <c-s> :w<cr>
-imap <c-s> <esc>:w<cr>a
+"nmap <c-s> :w<cr>
+"imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
 
 "======================= Explore ==================
