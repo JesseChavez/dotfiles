@@ -77,6 +77,14 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 " Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
+if has('mac')
+  Plug '/usr/local/opt/fzf'
+else
+  " Plug $HOME.'/.linuxbrew/opt/fzf'
+  Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
+endif
+Plug 'junegunn/fzf.vim'
+
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
 Plug 'jelera/vim-javascript-syntax'
@@ -139,6 +147,10 @@ let g:ale_linters = {
 \   'eruby': [],
 \}
 
+"---------------------- FZF -----------------------------
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>g :GFiles<cr>
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
