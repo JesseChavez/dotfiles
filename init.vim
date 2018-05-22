@@ -181,6 +181,9 @@ inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
 
+"======================== snippets ==========================
+nnoremap <leader>html :-1read $HOME/dotfiles/templates/basic.html<cr>
+
 "============================== spell checkiing =======================
 autocmd BufRead,BufNewFile *.md,*.rb,*.yml,*.js,*.py,*.vim,*.vue,*.txt,*.sh,COMMIT_EDITMSG setlocal spell
 set complete+=kspell
