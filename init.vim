@@ -142,7 +142,7 @@ let g:airline#extensions#ale#enabled = 1
 
 " without this all linters are enabled, this list enable specific linters
 let g:ale_linters = {
-\   'javascript': ['standard'],
+\   'javascript': ['eslint'],
 \   'ruby': ['rubocop', 'ruby'],
 \   'eruby': [],
 \}
