@@ -2,5 +2,13 @@
   "extends": "standard",
   "rules": {
     "camelcase": "off"
+  },
+  "globals": {
+    "$": false,
+    "_": false,
+    "Handlebars": false,
+    "HandlebarsUtil": false,
+    "location": false,
+    "ROOT_PATH": false
   }
 }
