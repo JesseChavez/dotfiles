@@ -68,7 +68,7 @@ Plug 'benjifisher/matchit.zip'             "original author
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 Plug 'mattn/emmet-vim'
-Plug 'vim-ruby/vim-ruby', {'for': 'ruby'}
+Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
