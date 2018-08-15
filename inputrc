@@ -1,0 +1,5 @@
+# use vim mode for any command line
+set editing-mode vi
+
+#  add following to use vi mode in bash only
+# 'set -o vi'
