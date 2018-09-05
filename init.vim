@@ -63,7 +63,6 @@ call plug#begin()
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'ervandew/supertab'
 Plug 'benjifisher/matchit.zip'             "original author
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
@@ -165,10 +164,6 @@ nnoremap <Leader>e :Ex<cr>
 "======================= airline settings =============================
 " let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 2
-
-"========================== supertab settings =======================
-let g:SuperTabDefaultCompletionType = '<c-n>'
-"let g:SuperTabContextDefaultCompletionType = '<c-n>'
 
 "=========================== Disabling Arrow keys ====================
 nnoremap <left> <nop>
