@@ -158,8 +158,12 @@ nnoremap <Leader>g :GFiles<cr>
 "imap <c-s> <esc>:w<cr>a
 "nmap <Leader>s :w<cr>
 
-"======================= Explore ==================
+"============================= Key Mappings ===================================
+" to open Explorer
 nnoremap <Leader>e :Ex<cr>
+
+" to trigger omnifunc
+inoremap <C-SPACE> <C-X><C-O>
 
 "======================= airline settings =============================
 " let g:airline_powerline_fonts = 2
