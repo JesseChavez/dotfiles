@@ -86,7 +86,6 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
