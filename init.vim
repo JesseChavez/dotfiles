@@ -61,6 +61,8 @@ let g:loaded_python3_provider = 1
 "----------------- vim-plug ---------------
 call plug#begin()
 Plug 'nanotech/jellybeans.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'benjifisher/matchit.zip'             "original author
@@ -99,6 +101,8 @@ call plug#end()
 "------------------------------------------
 
 "Set color scheme
+" silent! colorscheme OceanicNext
+" silent! colorscheme onedark
 silent! colorscheme jellybeans
 
 "------------------ splits settings ---------------------------------
