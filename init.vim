@@ -60,7 +60,7 @@ let g:loaded_python3_provider = 1
 
 "----------------- vim-plug ---------------
 call plug#begin()
-Plug 'nanotech/jellybeans.vim'
+Plug 'JesseChavez/jellybeans.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
