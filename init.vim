@@ -100,9 +100,9 @@ call plug#end()
 "------------------------------------------
 
 "Set color scheme
-" silent! colorscheme OceanicNext
 " silent! colorscheme onedark
 silent! colorscheme jellybeans
+" silent! colorscheme puma
 
 "------------------ splits settings ---------------------------------
 set splitbelow  " open new split below
@@ -200,3 +200,12 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 
 autocmd FileType vue syntax sync fromstart
+
+" function to debug color groups
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
