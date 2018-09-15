@@ -61,6 +61,7 @@ let g:loaded_python3_provider = 1
 "----------------- vim-plug ---------------
 call plug#begin()
 Plug 'JesseChavez/jellybeans.vim'
+Plug 'JesseChavez/vim-puma'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
@@ -101,8 +102,8 @@ call plug#end()
 
 "Set color scheme
 " silent! colorscheme onedark
-silent! colorscheme jellybeans
-" silent! colorscheme puma
+" silent! colorscheme jellybeans
+silent! colorscheme puma
 
 "------------------ splits settings ---------------------------------
 set splitbelow  " open new split below
@@ -137,7 +138,10 @@ let g:gitgutter_max_signs = 500  " default value
 let g:ale_set_highlights = 0
 
 let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚠'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_sign_warning = '！'
+let g:ale_sign_warning = '⚑'
+
 " Set this. Airline will handle the rest.
 let g:airline#extensions#ale#enabled = 1
 
