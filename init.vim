@@ -71,6 +71,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
