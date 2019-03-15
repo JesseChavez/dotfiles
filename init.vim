@@ -123,8 +123,11 @@ let g:filebeagle_suppress_keymaps = 1
 map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 
 "---------------------- Gitgutter -------------------------
-set updatetime=1000              " 1 second
-let g:gitgutter_max_signs = 500  " default value
+" set updatetime=1000              " 1 second
+" let g:gitgutter_max_signs = 500  " default value
+
+"-------------------- Signify (like Gitgutter) ----------------------
+let g:signify_sign_change = '~'
 
 "----------------------- Ale settings -------------------------------
 " let g:ale_sign_error = '>>'
