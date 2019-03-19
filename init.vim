@@ -32,9 +32,15 @@ set autoindent      " initial sinple indent, just coppy the previous line indent
 set completeopt=longest,menuone,preview " show the matches even if one
 
 " ------------- other complete  options-------------------
-set wildmode=list:full
+" It is assumed wildmenu is on
+" wildmode has to be full only to pum to work
+set wildmode=full
 " ignoring some folders, command-t uses this to ignore files
 set wildignore+=node_modules,log,tmp
+" display the matches in popup menu
+set wildoptions=pum
+" popup menu transparency
+set pumblend=17
 
 
 " ------------- syntax and editing file options -------------------
