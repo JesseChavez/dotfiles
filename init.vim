@@ -158,9 +158,9 @@ let g:ale_linters = {
 \}
 
 "---------------------- FZF -----------------------------
-nnoremap <Leader>b :Buffers<cr>
-nnoremap <Leader>f :Files<cr>
-nnoremap <Leader>g :GFiles<cr>
+" nnoremap <Leader>b :Buffers<cr>
+" nnoremap <Leader>f :Files<cr>
+" nnoremap <Leader>g :GFiles<cr>
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
@@ -175,6 +175,10 @@ nnoremap <Leader>e :Ex<cr>
 
 " to trigger omnifunc
 inoremap <C-SPACE> <C-X><C-O>
+
+" list buffers, it can be used 9 as well the code of <tab>
+set wildcharm=<Tab>
+nnoremap <Leader>b :buffer<space><Tab>
 
 "======================= airline settings =============================
 " let g:airline_powerline_fonts = 2
