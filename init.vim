@@ -86,8 +86,6 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 " Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
