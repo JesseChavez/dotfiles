@@ -31,12 +31,17 @@ set autoindent      " initial sinple indent, just coppy the previous line indent
 " ------------- complete options in insert mode-------------------
 set completeopt=longest,menuone,preview " show the matches even if one
 
-" ------------- other complete  options-------------------
+"-------------- sensible path  and ignoring folders -----------------
+set path+=lib/**,spec/**,test/**,src/**
+
+" ignoring some folders
+set wildignore+=node_modules,log,tmp
+" set wildignore+=*/node_modules/*
+
+" ------------- other complete options-------------------
 " It is assumed wildmenu is on
 " wildmode has to be full only to pum to work
 set wildmode=full
-" ignoring some folders, command-t uses this to ignore files
-set wildignore+=node_modules,log,tmp
 " display the matches in popup menu
 set wildoptions=pum
 " popup menu transparency
