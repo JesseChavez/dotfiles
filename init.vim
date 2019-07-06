@@ -91,6 +91,8 @@ Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 " Plug 'brooth/far.vim'
 Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -163,9 +165,9 @@ let g:ale_linters = {
 \}
 
 "---------------------- FZF -----------------------------
-" nnoremap <Leader>b :Buffers<cr>
-" nnoremap <Leader>f :Files<cr>
-" nnoremap <Leader>g :GFiles<cr>
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>g :GFiles<cr>
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
@@ -183,7 +185,7 @@ inoremap <C-SPACE> <C-X><C-O>
 
 " list buffers, it can be used 9 as well the code of <tab>
 set wildcharm=<Tab>
-nnoremap <Leader>b :buffer<space><Tab>
+" nnoremap <Leader>b :buffer<space><Tab>
 
 "======================= airline settings =============================
 " let g:airline_powerline_fonts = 2
