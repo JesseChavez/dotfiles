@@ -12,6 +12,7 @@ set showcmd        "show partial command in status line
 set showmode       "show mode
 "set showmatch      "show matching brackets
 set termguicolors
+set mouse=a
 
 "----------- search and copy/cut settings -------------
 set incsearch   "find the next match as we type the search
@@ -93,11 +94,13 @@ Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+Plug 'chemzqm/vim-jsx-improve'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
 Plug 'posva/vim-vue'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 "Plug 'othree/javascript-libraries-syntax.vim'
