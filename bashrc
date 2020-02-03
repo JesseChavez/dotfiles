@@ -116,17 +116,19 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#======================custom commences===========================
+#====================== custom commences ===========================
 # tree needs to be installed
 alias treed='tree --dirsfirst -F'
 alias ls1='tree --dirsfirst -F -L 1'
 alias ls2='tree --dirsfirst -F -L 2'
+alias ls3='tree --dirsfirst -F -L 3'
+alias qnvim='nvim-qt --no-ext-tabline'
 
 # command lines in history list ( in memory for current session )
 HISTSIZE=1000
 
 # command lines in history file ( .bash_history file )
-HISTFILESIZE=10000
+HISTFILESIZE=6000
 
 # parse_git_branch() {
 #      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -134,11 +136,13 @@ HISTFILESIZE=10000
 
 # git branch to the prompt
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(__git_ps1)\[\033[00m\]$ "
+export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(__git_ps1)\[\033[00m\]$\n(bash)> "
 
 # MS SQL server tools
-export PATH="$PATH:/opt/mssql-tools/bin"
-#======================custom concludes===========================
+# export PATH="$PATH:/opt/mssql-tools/bin"
 
- #Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# add chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+#====================== custom concludes ===========================
+

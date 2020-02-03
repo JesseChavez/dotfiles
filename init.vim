@@ -67,8 +67,8 @@ set noswapfile
 set backupcopy=yes
 
 "================ disable python 2 support ==================
-let g:loaded_python_provider = 1
-let g:loaded_python3_provider = 1
+let g:loaded_python_provider=1
+let g:loaded_python3_provider=1
 
 "----------------- vim-plug ---------------
 call plug#begin()
@@ -86,6 +86,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'codeindulgence/vim-tig'
 Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
@@ -115,6 +117,8 @@ call plug#end()
 " silent! colorscheme onedark
 " silent! colorscheme jellybeans
 silent! colorscheme puma
+
+set guifont=Noto\ Mono:h11
 
 "------------------ splits settings ---------------------------------
 set splitbelow  " open new split below
@@ -204,6 +208,9 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 inoremap <up> <nop>
 inoremap <down> <nop>
+
+"========================= coc =====================================
+let g:coc_global_extensions = ['coc-solargraph']
 
 "======================== snippets ==========================
 nnoremap <leader>html :-1read $HOME/dotfiles/templates/basic.html<cr>
