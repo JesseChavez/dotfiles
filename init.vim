@@ -173,6 +173,18 @@ set wildcharm=<Tab>
 " let g:airline_powerline_fonts = 2
 let g:airline#extensions#tabline#enabled = 2
 
+"==========================  c.o.c. ===================================
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 "=========================== Disabling Arrow keys ====================
 nnoremap <left> <nop>
 nnoremap <right> <nop>
@@ -214,3 +226,12 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+" function to convert ruby hash syntax style
+function! s:ChangeHashSyntax(line1,line2)
+    let l:save_cursor = getpos(".")
+    " silent! execute ':' . a:line1 . ',' . a:line2 . 's/\([^:]\):\([a-z0-9_]\+\)\s\+=>/\1\2:/g'
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/:\(\S\{-}\)\(\s\{-}\)=> /\1:\2/gc'
+    call setpos('.', l:save_cursor)
+endfunction
+
+command! -range=% ChangeHashSyntax call <SID>ChangeHashSyntax(<line1>,<line2>)
