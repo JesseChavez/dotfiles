@@ -144,5 +144,9 @@ export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]\$(
 # add chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+
+# export JAVA_HOME=$HOME/javas/jdk8u242-b08
+# export JAVA_HOME=$HOME/javas/jdk-11.0.6+10
+# export PATH=$JAVA_HOME/bin:$PATH
 #====================== custom concludes ===========================
 
