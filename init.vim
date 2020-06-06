@@ -88,7 +88,6 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'codeindulgence/vim-tig'
-Plug 'w0rp/ale'
 " Plug 'cohama/lexima.vim'
 Plug 'nathanaelkane/vim-indent-guides' " to toggle use ( <leader>ig )
 " Plug 'brooth/far.vim'
@@ -146,30 +145,6 @@ map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 
 "-------------------- Signify (like Gitgutter) ----------------------
 let g:signify_sign_change = '~'
-
-"----------------------- Ale settings -------------------------------
-" let g:ale_sign_error = '>>'
-" let g:ale_sign_warning = '--'
-
-" highlight clear ALEErrorSign
-" highlight clear ALEStyleWarning
-let g:ale_set_highlights = 0
-
-let g:ale_sign_error = '✗'
-" let g:ale_sign_warning = '⚠'
-" let g:ale_sign_warning = '⚑'
-let g:ale_sign_warning = '•'
-" let g:ale_sign_warning = '！'
-
-" Set this. Airline will handle the rest.
-let g:airline#extensions#ale#enabled = 1
-
-" without this all linters are enabled, this list enable specific linters
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'ruby': ['rubocop', 'ruby'],
-\   'eruby': [],
-\}
 
 "---------------------- FZF -----------------------------
 nnoremap <Leader>b :Buffers<cr>
