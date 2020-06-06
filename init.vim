@@ -99,9 +99,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
-Plug 'chemzqm/vim-jsx-improve'
-" Plug 'pangloss/vim-javascript'
+
+Plug 'HerringtonDarkholme/yats.vim'
+
+Plug 'pangloss/vim-javascript'
+" Plug 'othree/yajs.vim'
+" Plug 'yuezk/vim-js'
 " Plug 'mxw/vim-jsx'
+Plug 'chemzqm/vim-jsx-improve'
+Plug 'maxmellon/vim-jsx-pretty'
+
 Plug 'posva/vim-vue'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 "Plug 'othree/javascript-libraries-syntax.vim'
@@ -217,6 +224,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 
 autocmd FileType vue syntax sync fromstart
+" autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
 
 " function to debug color groups
 function! SynStack()
