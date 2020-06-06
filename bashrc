@@ -122,7 +122,7 @@ alias treed='tree --dirsfirst -F'
 alias ls1='tree --dirsfirst -F -L 1'
 alias ls2='tree --dirsfirst -F -L 2'
 alias ls3='tree --dirsfirst -F -L 3'
-alias qnvim='nvim-qt --no-ext-tabline'
+alias qnvim='nvim-qt --no-ext-tabline --no-ext-popupmenu'
 
 # command lines in history list ( in memory for current session )
 HISTSIZE=1000
