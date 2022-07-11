@@ -20,11 +20,12 @@ opt.termguicolors = true              -- truecolor support
 opt.splitbelow    = true              -- put new windows below current
 opt.splitright    = true              -- put new vertical splits to right
 
---- search and copy/cut/spell settings
-opt.incsearch = true                          -- find the next match as we type the search
-opt.hlsearch  = true                          -- highlight searches by default
-opt.clipboard = opt.clipboard + 'unnamedplus' -- copy to system clipboard
-opt.complete  = opt.complete + 'kspell'       -- spell check
+--- search, copy, paste, spell, ignore settings
+opt.incsearch  = true                          -- find the next match as we type the search
+opt.hlsearch   = true                          -- highlight searches by default
+opt.clipboard  = opt.clipboard + 'unnamedplus' -- copy to system clipboard
+opt.complete   = opt.complete + 'kspell'       -- spell check
+opt.wildignore = opt.wildignore + 'node_modules,log,tmp'
 
 --- plugins
 require('packer').startup(
@@ -35,7 +36,7 @@ require('packer').startup(
     use 'tpope/vim-fugitive'                  -- git plugin
     use 'tpope/vim-surround'                  -- change surrounds
     use 'nvim-lualine/lualine.nvim'           -- alternative to airline
-    use 'lewis6991/gitsigns.nvim'             -- git plugin similart to gittutter
+    use 'lewis6991/gitsigns.nvim'             -- git plugin similar to gittutter
     use {                                       
       'nvim-telescope/telescope.nvim',        -- Fuzzy Finder (files, lsp, etc)
       requires = { 'nvim-lua/plenary.nvim' }
