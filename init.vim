@@ -66,7 +66,7 @@ set noswapfile
 " It is strategy for saving files.
 set backupcopy=yes
 
-"================ disable python 2 support ==================
+"================ disable python support ==================
 let g:loaded_python_provider=1
 let g:loaded_python3_provider=1
 
@@ -74,6 +74,7 @@ let g:loaded_python3_provider=1
 call plug#begin()
 Plug 'JesseChavez/jellybeans.vim'
 Plug 'JesseChavez/vim-puma'
+Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-signify'
@@ -82,6 +83,7 @@ Plug 'benjifisher/matchit.zip'             "original author
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
 Plug 'mattn/emmet-vim'
+Plug 'vim-crystal/vim-crystal'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'ekalinin/Dockerfile.vim'
@@ -95,7 +97,9 @@ Plug 'kassio/neoterm'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neovim/nvim-lspconfig'
 
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'slim-template/vim-slim'
@@ -106,10 +110,11 @@ Plug 'pangloss/vim-javascript'
 " Plug 'othree/yajs.vim'
 " Plug 'yuezk/vim-js'
 " Plug 'mxw/vim-jsx'
-Plug 'chemzqm/vim-jsx-improve'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'chemzqm/vim-jsx-improve'
+" Plug 'maxmellon/vim-jsx-pretty'
 
 Plug 'posva/vim-vue'
+Plug 'udalov/kotlin-vim'
 " Plug 'ternjs/tern_for_vim' , { 'do': 'npm install' }
 "Plug 'othree/javascript-libraries-syntax.vim'
 " Plug '1995eaton/vim-better-javascript-completion'
@@ -154,9 +159,41 @@ map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 let g:signify_sign_change = '~'
 
 "---------------------- FZF -----------------------------
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+
 nnoremap <Leader>b :Buffers<cr>
 nnoremap <Leader>f :Files<cr>
 nnoremap <Leader>g :GFiles<cr>
+
+"----------------------- Ale settings -------------------------------
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+
+" highlight clear ALEErrorSign
+" highlight clear ALEStyleWarning
+let g:ale_set_highlights = 0
+
+let g:ale_sign_error = '✗'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_sign_warning = '⚑'
+let g:ale_sign_warning = '•'
+" let g:ale_sign_warning = '！'
+
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
+
+" disable lsp, coc will handle this
+let g:ale_disable_lsp = 1
+
+" without this all linters are enabled, this list enable specific linters
+" let g:ale_linters = {
+" \   'javascript': ['eslint'],
+" \   'ruby': ['rubocop', 'ruby'],
+" \   'eruby': [],
+" \}
+let g:ale_linters = {
+\   'ruby': ['ruby'],
+\}
 
 "======================= Save map ===================================
 " in some terminals  <c-s> it is used to stop the srolling
@@ -210,7 +247,7 @@ let g:coc_global_extensions = ['coc-solargraph']
 nnoremap <leader>html :-1read $HOME/dotfiles/templates/basic.html<cr>
 
 "============================== spell checkiing =======================
-autocmd BufRead,BufNewFile *.md,*.rb,*.yml,*.js,*.py,*.vim,*.vue,*.txt,*.sh,COMMIT_EDITMSG setlocal spell
+autocmd BufRead,BufNewFile *.md,*.rb,*.yml,*.js,*.ts,*.tsx,*.py,*.vim,*.vue,*.txt,*.sh,COMMIT_EDITMSG setlocal spell
 set complete+=kspell
 
 "=============== omni =============
@@ -222,6 +259,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " autocmd FileType slim setlocal foldmethod=indent
 " autocmd BufNewFile,BufRead *.slim set filetype=slim
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+
+autocmd FileType scss setl iskeyword+=@-@
 
 autocmd FileType vue syntax sync fromstart
 " autocmd bufnewfile,bufread *.tsx set filetype=typescript.tsx
