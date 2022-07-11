@@ -35,6 +35,10 @@ require('packer').startup(
     use 'jeetsukumaran/vim-filebeagle'        -- simple file navigation
     use 'tpope/vim-fugitive'                  -- git plugin
     use 'tpope/vim-surround'                  -- change surrounds
+    use 'tpope/vim-endwise'                   -- endwise closing language word
+    use 'Raimondi/delimitMate'                -- endwise for brackets, quotes, etc
+    use 'vim-ruby/vim-ruby'
+    use { 'tpope/vim-rails', ft = 'ruby' }    -- rails additions
     use 'nvim-lualine/lualine.nvim'           -- alternative to airline
     use 'lewis6991/gitsigns.nvim'             -- git plugin similar to gittutter
     use {                                       
