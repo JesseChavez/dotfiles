@@ -122,7 +122,9 @@ alias treed='tree --dirsfirst -F'
 alias ls1='tree --dirsfirst -F -L 1'
 alias ls2='tree --dirsfirst -F -L 2'
 alias ls3='tree --dirsfirst -F -L 3'
-alias qnvim='nvim-qt --no-ext-tabline --no-ext-popupmenu'
+alias ls4='tree --dirsfirst -F -L 4'
+# alias qnvim='nvim-qt --no-ext-tabline --no-ext-popupmenu'
+alias qnvim='nvim-qt'
 
 # command lines in history list ( in memory for current session )
 HISTSIZE=1000
@@ -148,5 +150,12 @@ source /usr/local/share/chruby/auto.sh
 # export JAVA_HOME=$HOME/javas/jdk8u242-b08
 # export JAVA_HOME=$HOME/javas/jdk-11.0.6+10
 # export PATH=$JAVA_HOME/bin:$PATH
+
+# info for Debian/Ubuntu packaging tools
+export DEBFULLNAME=""
+export DEBEMAIL=""
+
+# vim mode in terminal
+set -o vi
 #====================== custom concludes ===========================
 
