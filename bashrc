@@ -152,7 +152,7 @@ source /usr/local/share/chruby/auto.sh
 # export PATH=$JAVA_HOME/bin:$PATH
 
 # info for Debian/Ubuntu packaging tools
-export DEBFULLNAME=""
+export DEBFULLNAME="Jesse Chavez"
 export DEBEMAIL=""
 
 # vim mode in terminal

@@ -20,6 +20,16 @@ opt.termguicolors = true              -- truecolor support
 opt.splitbelow    = true              -- put new windows below current
 opt.splitright    = true              -- put new vertical splits to right
 
+--- initial tab and indent settings ------
+opt.expandtab   = true      -- Insert spaces when TAB is pressed.
+opt.shiftwidth  = 2         -- Indentation amount for < and > commands.
+opt.softtabstop = 2         -- Render TAB using this many spaces.
+opt.autoindent  = true      -- initial simple indent, just copy the previous line indent
+
+opt.list      = true
+opt.listchars = { tab = '·»', trail = '‡' }
+-- opt.listchars = { eol = '↲', tab = '·»', trail = '‡' }
+
 --- search, copy, paste, spell, ignore settings
 opt.incsearch  = true                          -- find the next match as we type the search
 opt.hlsearch   = true                          -- highlight searches by default
