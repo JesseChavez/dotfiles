@@ -101,5 +101,8 @@ require('config_gitsigns')
 -- treesitter configuration.
 -- require('config_treesitter')
 
+-- neovim diagnostics configuration
+require('config_diagnostics')
+
 -- neovim lsp configuration
 require('config_lsp')
