@@ -32,7 +32,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
 -- ruby, typescript, javascript
-local servers = { 'solargraph', 'tsserver', 'eslint' }
+local servers = { 'solargraph', 'tsserver', 'eslint', 'gopls' }
 
 local lspconfig = require('lspconfig')
 
