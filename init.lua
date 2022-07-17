@@ -89,6 +89,10 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   command = "setlocal spell"
 })
 
+-- no sure why FileType does not work
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.go" }, command = "setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab"
+})
 -- lualine configuration
 require('config_lualine')
 
