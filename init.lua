@@ -27,7 +27,7 @@ opt.softtabstop = 2         -- Render TAB using this many spaces.
 opt.autoindent  = true      -- initial simple indent, just copy the previous line indent
 
 opt.list      = true
-opt.listchars = { tab = '·»', trail = '‡' }
+opt.listchars = { tab = '▸ ', trail = '‡' }
 -- opt.listchars = { eol = '↲', tab = '·»', trail = '‡' }
 
 --- search, copy, paste, spell, ignore settings
@@ -84,10 +84,10 @@ cmd[[
 ]]
 
 -- ============================== spell checkiing =======================
-vim.api.nvim_create_autocmd(
-    { "BufRead", "BufNewFile" },
-    { pattern = { "*.txt", "*.md", "*.rb", '*.yml', '*.js', '*.ts', '*.tsx', '*.lua', '*.vim', '*.sh', 'COMMIT_EDITMSG' }, command = "setlocal spell" }
-)
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = { "*.txt", "*.md", "*.rb", '*.yml', '*.js', '*.ts', '*.tsx', '*.lua', '*.vim', '*.sh', 'COMMIT_EDITMSG' },
+  command = "setlocal spell"
+})
 
 -- lualine configuration
 require('config_lualine')
