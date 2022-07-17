@@ -23,7 +23,7 @@ local my_custom_on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<leader>pp', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', 'ff', vim.lsp.buf.formatting, bufopts)
 end
 
 -- nvim-cmp supports additional completion capabilities
