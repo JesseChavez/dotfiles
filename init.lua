@@ -49,9 +49,12 @@ require('packer').startup(
     use 'Raimondi/delimitMate'                -- endwise for brackets, quotes, etc
     use 'vim-ruby/vim-ruby'
     use { 'tpope/vim-rails', ft = 'ruby' }    -- rails additions
+    use 'HerringtonDarkholme/yats.vim'        -- typescript syntax and indentation
+    use 'maxmellon/vim-jsx-pretty'            -- fixes tsx indentation issue in yats
+    -- lua based plugins
     use 'nvim-lualine/lualine.nvim'           -- alternative to airline
     use 'lewis6991/gitsigns.nvim'             -- git plugin similar to gittutter
-    use {                                       
+    use {
       'nvim-telescope/telescope.nvim',        -- Fuzzy Finder (files, lsp, etc)
       requires = { 'nvim-lua/plenary.nvim' }
     }
