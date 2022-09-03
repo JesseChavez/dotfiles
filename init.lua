@@ -42,6 +42,8 @@ require('packer').startup(
   function()
     use 'wbthomason/packer.nvim'              -- Packer can manage itself
     use 'JesseChavez/vim-puma'                -- my own color scheme
+    use 'joshdick/onedark.vim'                -- alternative color scheme
+    use 'folke/tokyonight.nvim'               -- another alternative color scheme
     use 'jeetsukumaran/vim-filebeagle'        -- simple file navigation
     use 'tpope/vim-fugitive'                  -- git plugin
     use 'tpope/vim-surround'                  -- change surrounds
@@ -78,6 +80,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- setting color color scheme
+vim.g.tokyonight_style = 'night'
 cmd[[colorscheme puma]]
 
 -- suppress filebeagle key mapping, by defaults binds <leader>f
