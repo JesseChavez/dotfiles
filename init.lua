@@ -89,6 +89,17 @@ cmd[[
   map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 ]]
 
+-- function to debug and customise color schemes for old vim regex syntax engine
+-- run in command mode :call SynStack()
+cmd [[
+  function! SynStack()
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  endfunction
+]]
+
 -- ============================== spell checkiing =======================
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.txt", "*.md", "*.rb", '*.yml', '*.js', '*.ts', '*.tsx', '*.lua', '*.vim', '*.sh', 'COMMIT_EDITMSG' },
