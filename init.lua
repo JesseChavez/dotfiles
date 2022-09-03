@@ -62,10 +62,11 @@ require('packer').startup(
     }
     use 'mustache/vim-mustache-handlebars'    -- support for mustache and handlebars
     use 'slim-template/vim-slim'              -- support for slim templates
-    -- use {
-    --     'nvim-treesitter/nvim-treesitter',    -- better code highlight
-    --     run = ':TSUpdate'
-    -- }
+    use {
+        'nvim-treesitter/nvim-treesitter',    -- better code highlight
+        run = ':TSUpdate'
+    }
+    use 'nvim-treesitter/playground'         -- treesitter tree and debug highlighting
     use 'neovim/nvim-lspconfig'               -- configuration for neovim built-in lsp
     use 'hrsh7th/nvim-cmp'         -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp'     -- LSP source for nvim-cmp
@@ -120,7 +121,7 @@ require('config_telescope')
 require('config_gitsigns')
 
 -- treesitter configuration.
--- require('config_treesitter')
+require('config_treesitter')
 
 -- neovim diagnostics configuration
 require('config_diagnostics')
