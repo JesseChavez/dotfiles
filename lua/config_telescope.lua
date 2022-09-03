@@ -1,6 +1,8 @@
 -- telescope setup
 
-require('telescope').setup()
+require('telescope').setup({
+  defaults = { layout_strategy = "vertical" }
+})
 
 vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 
