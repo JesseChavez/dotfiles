@@ -124,7 +124,7 @@ alias ls2='tree --dirsfirst -F -L 2'
 alias ls3='tree --dirsfirst -F -L 3'
 alias ls4='tree --dirsfirst -F -L 4'
 # alias qnvim='nvim-qt --no-ext-tabline --no-ext-popupmenu'
-alias qnvim='nvim-qt'
+alias qvim='nvim-qt'
 
 # command lines in history list ( in memory for current session )
 HISTSIZE=1000
