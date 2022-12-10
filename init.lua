@@ -37,6 +37,24 @@ opt.clipboard  = opt.clipboard + 'unnamedplus' -- copy to system clipboard
 opt.complete   = opt.complete + 'kspell'       -- spell check
 opt.wildignore = opt.wildignore + 'node_modules,log,tmp'
 
+--- setting font
+if vim.g.goneovim then
+  -- no sure why opt.guifont does not work for goneovim and nvui
+  -- cmd[[set guifont=Noto\ Mono:h12]]
+  cmd[[set guifont=DejaVu\ San\ Mono:h12]]
+elseif vim.g.nvui then
+  cmd[[set guifont=Noto\ Mono:h12]]
+elseif vim.g.nvimQt then
+  -- nvim-qt does not define a global var for this, only defines GuiFont, etc.
+  -- but it does not work here. It uses ginit.vim to load font & other settings.
+  -- It also has nvim-qt.conf configurable directly, setting font in command
+  -- mode will update nvim-qt.conf e.g. "set guifont=DejaVu\ San\ Mono:h12"
+else
+  -- It seems for nvim in terminal, the font is managed by the terminal app
+  -- this is set but ignored
+  opt.guifont = { 'Noto Mono', 'h14' }
+end
+
 --- plugins
 require('packer').startup(
   function()
