@@ -151,11 +151,18 @@ source /usr/local/share/chruby/auto.sh
 # export JAVA_HOME=$HOME/javas/jdk-11.0.6+10
 # export PATH=$JAVA_HOME/bin:$PATH
 
+
+export PATH=$HOME/bin:$PATH
+
 # info for Debian/Ubuntu packaging tools
 export DEBFULLNAME="Jesse Chavez"
-export DEBEMAIL=""
+export DEBEMAIL="jesse.chavez.r@gmail.com"
 
 # vim mode in terminal
 set -o vi
+
+# turns off software flow control (C-s was use to interrupt flow)
+# setting the below make C-s to be the go to the opposite direction of C-r
+stty -ixon
 #====================== custom concludes ===========================
 
