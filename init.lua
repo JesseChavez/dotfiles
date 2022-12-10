@@ -120,6 +120,9 @@ cmd [[
 ]]
 
 -- ============================== spell checkiing =======================
+vim.keymap.set('n', 'rr', ":!go run main.go<cr>", {noremap = true})
+
+-- ============================== spell checkiing =======================
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.txt", "*.md", "*.rb", '*.yml', '*.js', '*.ts', '*.tsx', '*.lua', '*.vim', '*.sh', 'COMMIT_EDITMSG' },
   command = "setlocal spell"
